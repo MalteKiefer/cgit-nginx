@@ -5,10 +5,10 @@ ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER Malte Kiefer "malte.kiefer@mailgermania.de"
 
 RUN apt-get -qq update && \
-    apt-get -qy install vim gettext-base \
-                        fcgiwrap git cgit highlight \
-                        ca-certificates nginx gettext-base \
-                        markdown python-docutils python-pygments groff && \
+    apt-get -qy install gettext-base \
+                        python3-markdown python3-pygments \
+			markdown fcgiwrap git cgit highlight \
+                        ca-certificates nginx gettext-base && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN useradd nginx
