@@ -1,10 +1,13 @@
 version: '3'
 services:
-        cgit_srv:
-                build: .
-                ports:
-                        - 8181:80
-                volumes:
-                        - /srv/git:/srv/git
-                        - ./default.conf:/etc/nginx/sites-available/default
-                        - ./cgitrc:/etc/cgitrc
+  app:
+    image: beli3ver/cgit-nginx:latest
+    container_name: cgit
+    restart: always
+    ports:
+      - 8181:80
+    volumes:
+      - /srv/git:/srv/git
+      - /var/cache/cgit:/var/cache/cgit
+      - ./default.conf:/etc/nginx/sites-available/default
+      - ./cgitrc:/etc/cgitrc
