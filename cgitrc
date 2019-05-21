@@ -66,23 +66,14 @@ readme=:README.txt
 readme=:readme.txt
 readme=:README
 readme=:readme
-readme=:INSTALL.md
-readme=:install.md
-readme=:INSTALL.mkd
-readme=:install.mkd
-readme=:INSTALL.rst
-readme=:install.rst
-readme=:INSTALL.html
-readme=:install.html
-readme=:INSTALL.htm
-readme=:install.htm
-readme=:INSTALL.txt
-readme=:install.txt
-readme=:INSTALL
-readme=:install
+
+##
+## formatting
+####
+
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.sh
+about-filter=/usr/lib/cgit/filters/about-formatting.sh
 
 robots=noindex, nofollow
 virtual-root=/
 scan-path=/srv/git/
-
-source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
