@@ -1,6 +1,8 @@
 # cgit-nginx
 A debian based docker for cgit with nginx
 
+***This is only a mirror from my own hosted git server! This is only for issues and Docker Hub"
+
 ## Installation
 Download this image from the docker hub:
 ```bash
