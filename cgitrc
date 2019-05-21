@@ -1,0 +1,88 @@
+##
+## Default Theme
+####
+css=/cgit-css/cgit.css
+logo=/cgit-css/cgit.png
+
+##
+## Cache
+####
+cache-root=/var/cache/cgit
+cache-size=1000
+cache-dynamic-ttl=5
+cache-repo-ttl=5
+
+##
+## Repo Infos
+####
+
+enable-index-owner=1
+enable-git-config=1
+
+##
+## Repo Settings
+####
+
+enable-index-links=1
+remove-suffix=1
+enable-commit-graph=1
+enable-log-filecount=1
+branch-sort=age
+enable-log-linecount=1
+branch-sort=week
+
+##
+## Snapshots
+####
+snapshots=tar.gz tar.bz2 zip
+
+##
+## List of common mimetypes
+####
+
+mimetype.gif=image/gif
+mimetype.html=text/html
+mimetype.jpg=image/jpeg
+mimetype.jpeg=image/jpeg
+mimetype.pdf=application/pdf
+mimetype.png=image/png
+mimetype.svg=image/svg+xm
+
+##
+## README
+####
+
+readme=:README.md
+readme=:readme.md
+readme=:README.mkd
+readme=:readme.mkd
+readme=:README.rst
+readme=:readme.rst
+readme=:README.html
+readme=:readme.html
+readme=:README.htm
+readme=:readme.htm
+readme=:README.txt
+readme=:readme.txt
+readme=:README
+readme=:readme
+readme=:INSTALL.md
+readme=:install.md
+readme=:INSTALL.mkd
+readme=:install.mkd
+readme=:INSTALL.rst
+readme=:install.rst
+readme=:INSTALL.html
+readme=:install.html
+readme=:INSTALL.htm
+readme=:install.htm
+readme=:INSTALL.txt
+readme=:install.txt
+readme=:INSTALL
+readme=:install
+
+robots=noindex, nofollow
+virtual-root=/
+scan-path=/srv/git/
+
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
