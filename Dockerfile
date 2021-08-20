@@ -2,7 +2,7 @@ FROM debian:testing
 
 ENV DEBIAN_FRONTEND noninteractive
 
-MAINTAINER Malte Kiefer "maltekiefer1987@gmail.com"
+MAINTAINER Malte Kiefer "malte.kiefer@mailgermania.de"
 
 RUN apt-get -qq update && \
     apt-get -qy install gettext-base \
