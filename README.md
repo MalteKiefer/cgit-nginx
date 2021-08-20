@@ -35,35 +35,4 @@ services:
       #- ./default.conf:/etc/nginx/sites-available/default
       #- ./cgitrc:/etc/cgitrc
 ```
-In combination with traefik it could look like this:
-```yaml
-version: '3'
-services:
-  app:
-    image: beli3ver/cgit-nginx:latest
-    container_name: cgit
-    restart: always
-    networks:
-      - web
-    volumes:
-      - /srv/git:/srv/git
-      - /var/cache/cgit:/var/cache/cgit
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=git.example.com"
-      - "traefik.frontend=git.example.com"
-      - "traefik.docker.network=web"
-      - "traefik.frontend.rule=Host:git.example.com"
-      - "traefik.port=80"
-      - "traefik.frontend.headers.SSLRedirect=true"
-      - "traefik.frontend.headers.STSSeconds=315360000"
-      - "traefik.frontend.headers.browserXSSFilter=true"
-      - "traefik.frontend.headers.contentTypeNosniff=true"
-      - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-      - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
-networks:
-  web:
-    external: true
-```
+
